@@ -1,21 +1,25 @@
-# CODECAMP PWA starter
+# CODECAMP — Python Learning PWA
 
-This is a phone-friendly PWA starter. It includes a small Python learning path, quizzes, local point/progress storage, a basic print() playground demonstration, and a service worker.
+This package contains the 12-chapter, 72-unit CODECAMP learning prototype, with a local Log In / Sign Up screen.
 
-## Important limitations
-- Progress is currently stored in this browser on this device only (localStorage). It is NOT synced between devices and is not a secure account system.
-- Sign-in, Guest account linking, Firestore, server-side points validation, AI tutor, real Python execution, leaderboard, verified achievements, and Premium billing are NOT connected in this starter.
-- The playground only demonstrates `print("text")`; it does not execute arbitrary Python.
-- The RM10/month Premium price is a proposed display only. No payment is collected.
+## Files
 
-## Publish as a PWA
-1. Upload all files in this folder to a GitHub repository (or another static HTTPS host).
-2. Enable GitHub Pages in repository Settings > Pages, or use another HTTPS hosting provider.
-3. Open the deployed HTTPS URL on Android Chrome.
-4. Use Chrome menu > Install app / Add to Home screen (wording may vary).
+- `index.html` — app pages and sign-in / sign-up form
+- `style.css` — visual styles
+- `app.js` — account prototype, progress, points, lessons and quizzes
+- `course-data.js` — 12 chapters, 72 units and their practice questions
+- `manifest.webmanifest`, `sw.js`, `icon.svg` — PWA installation and offline cache files
 
-## Package as Android app
-After the PWA is publicly hosted on HTTPS and the manifest is accessible, use PWABuilder's web interface to inspect/package it for Android. For a Trusted Web Activity, a valid Digital Asset Links file and signing key are required. Keep the signing key private and backed up.
+## Deploy on GitHub Pages
 
-Official docs: https://developer.android.com/develop/ui/views/layout/webapps/guide-trusted-web-activities-version2
-PWABuilder: https://www.pwabuilder.com/
+Upload all files in this folder to the repository's root folder (the same level as the repository's existing `index.html`), then commit the changes. Keep all eight files together.
+
+## Account limitation — read this
+
+The Log In / Sign Up flow is a **device-local prototype**. Account records and learning progress are saved in the current browser's local storage. It does not use a server, does not verify email ownership, and does not sync accounts or progress between devices. Clearing the browser's site data can remove the local accounts and progress. Do not use a password that you use for important accounts elsewhere.
+
+A real multi-device account system needs a secure authentication backend and a database (for example, Firebase Authentication + Firestore), along with appropriate security rules and privacy handling. This static GitHub Pages prototype does not include those services.
+
+## Premium
+
+The Premium panel is only a concept preview. Real payments or subscriptions are not enabled.
