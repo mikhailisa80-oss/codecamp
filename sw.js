@@ -1,4 +1,4 @@
-const CACHE = 'codecamp-pwa-v3-auth';
+const CACHE = 'codecamp-pwa-v4-auth-fix';
 const FILES = ['./','./index.html','./style.css','./app.js','./course-data.js','./manifest.webmanifest','./icon.svg'];
 self.addEventListener('install', event => event.waitUntil(caches.open(CACHE).then(cache => cache.addAll(FILES))));
 self.addEventListener('activate', event => event.waitUntil(caches.keys().then(keys => Promise.all(keys.filter(key => key !== CACHE).map(key => caches.delete(key))))));

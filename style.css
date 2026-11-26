@@ -20,3 +20,6 @@ body.auth-locked header,body.auth-locked main,body.auth-locked nav{display:none}
 .auth-note{color:#9eabc9;font-size:10px;line-height:1.55;margin:18px 0 0}
 .secondary{background:#293858;color:#fff;width:100%}
 @media(min-width:600px){.auth-card{padding:30px}.auth-card h1{font-size:30px}}
+
+/* Fix: hide auth screen after successful login */
+.auth-gate[hidden]{display:none!important}
